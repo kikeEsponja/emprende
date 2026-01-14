@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 2px solid green;
+}
+.logo > img{
+    width: 100%;
+    border-radius: 50%;}
+.lista{
+    border: solid orange 2px;
+    border-radius: 10px;
+    width: 25%;
+}
+aside{
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 0;
+}
+aside > img{
+    width: 100%;
+}
+.circulo{
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacto{
+    width: 100%;
+    display: flex;
+}
+.contacto > div{
+    display: flex;
+    align-items: center;
+    border: 2px solid green;
+    width: 100%;
+}
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.contact{
+    font-size: 50px;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+}
