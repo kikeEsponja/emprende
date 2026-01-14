@@ -44,7 +44,6 @@ aside > img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    align-self: center;
 }
 .circulo > div{
     display: flex;
@@ -83,4 +82,9 @@ footer{
     width: 30%;
     height: 200px;
     border: 2px solid black;
+}
+@media(max-width: 500px){
+    .lista{
+        width: 100%;
+    }
 }
