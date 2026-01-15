@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Courier New';
+}
 .logo{
     border-radius: 50%;
     width: 100px;
@@ -14,15 +17,37 @@
     width: 100%;
     border-radius: 50%;
 }
-nav > ul{
-    list-style: none;
+.contenedor-lista{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.contenedor-items > ul{
+    list-style: none;
+    text-align: start;
+}
+.contenedor-items{
+    width: 100%;
+}
+.contenedor-items > ul > li{
+    margin: 1%;
+    height: 25px;
+    transition: 0.3s ease-in-out transform;
+    width: 750px;
+}
+.contenedor-items > ul > li:hover{
+    cursor: pointer;
+    background: #c92a2a;
+    font-size: 20px;
+    transform: scale(1.1);
+    border-radius: 20px;
+    text-align: center;
 }
 .lista{
     border: solid orange 2px;
     border-radius: 10px;
-    width: 50%;
+    width: 70%;
 }
 /*section{
     width: 50%;
@@ -35,7 +60,7 @@ nav > ul{
     background: url('../img/img_1.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: start;
+    /*background-position: start;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +76,7 @@ nav > ul{
     margin: 1%;
 }
 /*************************************************************/
-aside{
+/*aside{
     position: absolute;
     width: 50%;
     right: 0;
@@ -59,6 +84,10 @@ aside{
 }
 aside > img{
     width: 100%;
+}*/
+.contenedor-circulo{
+    width: 160px;
+    height: 160px;
 }
 .circulo{
     border: 2px solid #fff;
@@ -69,19 +98,21 @@ aside > img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    animation: 1s infinite alternate ease boton;
 }
-.circulo > div{
-    display: flex;
+@keyframes boton{
+    from{
+        width: 150px;
+        height: 150px;
+    }
+    to{
+        width: 155px;
+        height: 155px;
+    }
 }
 .contacto{
     width: 100%;
     display: flex;
-}
-.contacto > div{
-    display: flex;
-    align-items: center;
-    border: 2px solid green;
-    width: 100%;
 }
 .right{
     display: flex;
@@ -90,6 +121,18 @@ aside > img{
 }
 .contact{
     font-size: 50px;
+}
+.contacto-texto{
+    display: flex;
+    font-size: 25px;
+    flex-direction: column;
+}
+.left, .right{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0.25%;
+    justify-content: space-around;
 }
 footer{
     display: flex;
@@ -108,8 +151,85 @@ footer{
     height: 200px;
     border: 2px solid black;
 }
-@media(max-width: 500px){
+@media(max-width: 1220px){
+    .contenedor-items > ul > li{
+        width: 700px;
+    }
+}
+@media(max-width: 1150px){
+    .contenedor-items > ul > li{
+        width: 650px;
+    }
+}
+@media(max-width: 1070px){
+    .contenedor-items > ul > li{
+        width: 600px;
+    }
+}
+@media(max-width: 990px){
+    .contenedor-items > ul > li{
+        width: 550px;
+    }
+}
+@media(max-width: 910px){
+    .contenedor-items > ul > li{
+        width: 500px;
+    }
+}
+@media(max-width: 840px){
+    .contenedor-items > ul > li{
+        width: 450px;
+    }
+}
+@media(max-width: 760px){
+    .contenedor-lista{
+        flex-direction: column;
+    }
     .lista{
         width: 100%;
+        margin: 1%;
+    }
+    .contenedor-items{
+        width: 100%;
+    }
+    .contenedor-items > ul > li{
+        width: 550px;
+    }
+}
+@media(max-width: 650px){
+    .contenedor-items > ul > li{
+        width: 500px;
+    }
+}
+@media(max-width: 600px){
+    .contenedor-items > ul > li{
+        width: 450px;
+    }
+    .contacto{
+        flex-direction: column;
+    }
+}
+@media(max-width: 540px){
+    .contenedor-items > ul > li{
+        width: 400px;
+    }
+    .contenedor-items > ul > li:hover{
+        background: #c6c92a;
+        transform: scale(1.05);
+        font-size: 15px;
+        text-align: start;
+    }
+}
+@media(max-width: 470px){
+    .contenedor-items > ul > li{
+        height: 25px;
+        transition: 0.1s ease-in-out transform;
+        width: 350px;
+    }
+    .contenedor-items > ul > li:hover{
+        transform: scale(0.99);
+    }
+    .contenedor-items > ul{
+        padding-left: 0;
     }
 }
